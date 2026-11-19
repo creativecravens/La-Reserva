@@ -374,7 +374,7 @@ section { scroll-margin-top: 4rem; }
 .family-photo img { width: 100%; border-radius: 22px; }
 .family-text h2 { font-size: clamp(1.8rem, 3.2vw, 3rem); line-height: 1.06; }
 .family-text p { max-width: var(--measure); margin-top: 1.25rem; color: var(--muted); }
-@media (min-width: 900px) { .family { grid-template-columns: 1fr 1fr; column-gap: clamp(2.5rem, 5vw, 5rem); align-items: end; } }
+
 
 .notes { padding: var(--section) var(--gutter) 0; }
 .notes h2 { margin-bottom: clamp(2rem, 4vw, 3.5rem); }

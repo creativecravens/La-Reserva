@@ -394,6 +394,15 @@ section { scroll-margin-top: 4rem; }
 .notes-grid img { width: 100%; margin-bottom: clamp(.6rem, 1.4vw, 1.25rem); border-radius: 14px; break-inside: avoid; background: var(--card); }
 @media (min-width: 900px) { .notes-grid { columns: 3; } }
 
+.pitch { padding: var(--section) var(--gutter) 0; }
+.pitch .label { color: var(--muted); }
+.pitch h2 { max-width: 18ch; margin-top: .9rem; font-size: clamp(2rem, 4.4vw, 3.9rem); line-height: 1.04; text-wrap: balance; }
+.pitch-list { list-style: none; margin: clamp(2rem, 5vw, 3.5rem) 0 clamp(2rem, 4vw, 3rem); padding: 0; display: grid; counter-reset: why; }
+.pitch-list li { counter-increment: why; display: grid; grid-template-columns: 2.5rem 1fr; column-gap: .75rem; align-content: start; border-top: 1px solid var(--line); padding-block: 1.4rem; }
+.pitch-list li::before { content: counter(why, decimal-leading-zero); grid-row: span 2; font-size: .78rem; font-weight: 500; letter-spacing: .16em; color: var(--muted); padding-top: .35rem; }
+.pitch-list h3 { margin: 0; font-size: 1.25rem; font-weight: 600; letter-spacing: -.02em; line-height: 1.25; }
+.pitch-list p { max-width: var(--measure); margin-top: .4rem; color: var(--muted); }
+@media (min-width: 900px) { .pitch-list { grid-template-columns: 1fr 1fr; column-gap: clamp(2rem, 5vw, 5rem); } }
 .reserve {
   position: relative; isolation: isolate;
   display: grid; align-items: end;
@@ -598,7 +607,7 @@ section { scroll-margin-top: 4rem; }
 
     /* sections rise into place as they enter the screen */
     .cup h2, .cup-lede, .facts div, .cup-photo, .farm h2, .why h2, .swipe-hint, .price-cols, .lens-head, .lens-glass,
-    .harvest h2, .harvest-grid figure, .family-text, .notes h2, .notes-grid img, .reserve-inner {
+    .harvest h2, .harvest-grid figure, .pitch h2, .pitch-list li, .family-text, .notes h2, .notes-grid img, .reserve-inner {
       animation: rise linear both; animation-timeline: view(); animation-range: entry 0% cover 28%;
     }
     @media (max-width: 899px) { .reasons { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% cover 24%; } }
